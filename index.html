@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>MM 平台</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>MM 室内设计智能平台</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🎉 欢迎访问 MM 平台</h1>
-  <p>这是一个用于部署演示的网页。</p>
-  <button onclick="sayHello()">点击我</button>
+  <h1>🏠 MM 室内设计智能平台</h1>
+  <p>请上传您的图纸，系统将自动识别结构、生成布局图。</p>
+
+  <div class="upload-section">
+    <input type="file" id="uploadInput" accept="image/*" />
+    <div id="preview"></div>
+  </div>
+
+  <div class="button-group">
+    <button onclick="detectStructure()">识别结构</button>
+    <button onclick="generateLayout()">生成平面图</button>
+  </div>
+
+  <div id="output"></div>
 
   <script src="main.js"></script>
 </body>
